@@ -21,7 +21,7 @@ guess = None
 guess_count = 7
 
 while guess_count > 0:
-    while True:
+    while True: #resource https://docs.python.org/3/tutorial/errors.html
         try:
             guess = int(input("What is your guess?"))
             break
