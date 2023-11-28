@@ -12,12 +12,14 @@
 #Nadia and Katrina collab
 import random
 
-print("Hello and welcome to the Guessing Game!")
+print("Hello and welcome to the Guessing Game! \nYou will get to choose your min and max number. \nFrom which the computer gods will pick a chosen one for you to guess.")
 name = input("What is your name?")
-
-random_number = random.randint(1,100)
+min_num = int(input("What will be your starting number?"))
+max_num = int(input("What is your ending number?"))
+random_number = random.randint(min_num,max_num)
 guess = None
 guess_count = 7
+
 while guess_count > 0:
     while True:
         try:
@@ -26,7 +28,6 @@ while guess_count > 0:
         except ValueError:
             print("Not a valid input.")
 
-    
     guess_count -=1
     
     if guess < random_number:
