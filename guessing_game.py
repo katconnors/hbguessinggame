@@ -9,9 +9,10 @@
     #else:
      #   congratulate player
 
+#Nadia and Katrina collab
 import random
 
-print("Hi!")
+print("Hello and welcome to the Guessing Game!")
 name = input("What is your name?")
 
 random_number = random.randint(1,100)
@@ -22,7 +23,7 @@ while guess != random_number:
     guess = input("What is your guess?")
     if not("0" in guess or "1" in guess or "2" in guess or "3" in guess or "4" in guess or "5" in guess or "6" in guess or "7" in guess or "8" in guess or "9" in guess):
         print("Not a valid input. Type a number.")
-        break
+        continue
     else:
         guess = int(guess)
         guess_count +=1
