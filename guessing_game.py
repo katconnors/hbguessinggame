@@ -19,13 +19,15 @@ random_number = random.randint(1,100)
 guess = None
 guess_count = 7
 while guess_count > 0:
-    guess = input("What is your guess?")
-    if not("0" in guess or "1" in guess or "2" in guess or "3" in guess or "4" in guess or "5" in guess or "6" in guess or "7" in guess or "8" in guess or "9" in guess):
-        print("Not a valid input. Type a number.")
-        continue
-    else:
-        guess = int(guess)
-        guess_count -=1
+    while True:
+        try:
+            guess = int(input("What is your guess?"))
+            break
+        except ValueError:
+            print("Not a valid input.")
+
+    
+    guess_count -=1
     
     if guess < random_number:
         print(f"{name}, guess is too low. You have {guess_count} guesses left.")
